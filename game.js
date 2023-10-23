@@ -1,3 +1,4 @@
+/* eslint-disable max-depth */
 function completeArray(rows, column) {
   const initialArray = [];
 
