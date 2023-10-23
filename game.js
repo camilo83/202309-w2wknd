@@ -7,8 +7,10 @@ function completeArray(rows, column) {
       const number = Math.round(Math.random());
       interiorArray.push(number);
     }
+
     initialArray.push(interiorArray);
   }
+
   return initialArray;
 }
 
@@ -17,6 +19,7 @@ function emptyArray(rows) {
   for (let i = 0; i < rows; i++) {
     newArray.push([]);
   }
+
   return newArray;
 }
 
@@ -29,10 +32,10 @@ let array = initialArray;
 let j = 0;
 console.log(array);
 while (j < rounds) {
-  newArray = emptyArray(rows);
-  for (y = 0; y < array.length; y++) {
-    for (x = 0; x < array[0].length; x++) {
-      let valuesArray = [];
+  const newArray = emptyArray(rows);
+  for (let y = 0; y < array.length; y++) {
+    for (let x = 0; x < array[0].length; x++) {
+      const valuesArray = [];
       if (
         (y === 0 && x === 0) ||
         (y === 0 && x === array.length - 1) ||
@@ -46,6 +49,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x] === 1) {
@@ -53,6 +57,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x + 1] === 1) {
@@ -60,6 +65,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         } else if (y === 0 && x === array.length - 1) {
           if (array[y][x - 1] === 1) {
@@ -67,6 +73,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x - 1] === 1) {
@@ -74,6 +81,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x] === 1) {
@@ -81,6 +89,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         } else if (y === array.length - 1 && x === 0) {
           if (array[y - 1][x] === 1) {
@@ -88,6 +97,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y - 1][x + 1] === 1) {
@@ -95,6 +105,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x + 1] === 1) {
@@ -102,6 +113,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         } else {
           if (array[y - 1][x - 1] === 1) {
@@ -109,6 +121,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y - 1][x] === 1) {
@@ -116,6 +129,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x - 1] === 1) {
@@ -123,6 +137,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         }
       } else if (
@@ -138,6 +153,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y - 1][x + 1] === 1) {
@@ -145,6 +161,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x + 1] === 1) {
@@ -152,6 +169,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x] === 1) {
@@ -159,6 +177,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x + 1] === 1) {
@@ -166,6 +185,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         } else if (x === array.length - 1) {
           if (array[y - 1][x - 1] === 1) {
@@ -173,6 +193,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y - 1][x] === 1) {
@@ -180,6 +201,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x - 1] === 1) {
@@ -187,6 +209,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x - 1] === 1) {
@@ -194,6 +217,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x] === 1) {
@@ -201,6 +225,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         } else if (y === 0) {
           if (array[y][x - 1] === 1) {
@@ -208,6 +233,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x + 1] === 1) {
@@ -215,6 +241,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x - 1] === 1) {
@@ -222,6 +249,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x] === 1) {
@@ -229,6 +257,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y + 1][x + 1] === 1) {
@@ -236,6 +265,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         } else {
           if (array[y - 1][x - 1] === 1) {
@@ -243,6 +273,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y - 1][x] === 1) {
@@ -250,6 +281,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y - 1][x + 1] === 1) {
@@ -257,6 +289,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x - 1] === 1) {
@@ -264,6 +297,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
 
           if (array[y][x + 1] === 1) {
@@ -271,6 +305,7 @@ while (j < rounds) {
           } else {
             valuesArray[i] = 0;
           }
+
           i++;
         }
       } else {
@@ -280,6 +315,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y - 1][x] === 1) {
@@ -287,6 +323,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y - 1][x + 1] === 1) {
@@ -294,6 +331,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y][x - 1] === 1) {
@@ -301,6 +339,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y][x + 1] === 1) {
@@ -308,6 +347,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y + 1][x - 1] === 1) {
@@ -315,6 +355,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y + 1][x] === 1) {
@@ -322,6 +363,7 @@ while (j < rounds) {
         } else {
           valuesArray[i] = 0;
         }
+
         i++;
 
         if (array[y + 1][x + 1] === 1) {
@@ -333,7 +375,7 @@ while (j < rounds) {
 
       let counter = 0;
 
-      for (k = 0; k < valuesArray.length; k++) {
+      for (let k = 0; k < valuesArray.length; k++) {
         counter += valuesArray[k];
       }
 
@@ -343,15 +385,14 @@ while (j < rounds) {
         } else {
           newArray[y][x] = 0;
         }
+      } else if (counter === 2 || counter === 3) {
+        newArray[y][x] = 1;
       } else {
-        if (counter === 2 || counter === 3) {
-          newArray[y][x] = 1;
-        } else {
-          newArray[y][x] = 0;
-        }
+        newArray[y][x] = 0;
       }
     }
   }
+
   array = newArray;
   console.log(array);
   j++;
